@@ -1,0 +1,22 @@
+[package]
+name = "rata-db"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ratatui = "0.29.0"
+sqlx = { version = "0.8", features = ["mysql", "postgres", "sqlite", "runtime-tokio-rustls", "chrono", "uuid"] }
+tokio = { version = "1.0", features = ["full", "process", "time"] }
+tokio-util = "0.7"
+crossterm = "0.28"
+anyhow = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+dirs = "5.0"
+tokio-native-tls = "0.3"
+native-tls = "0.2"
+rfd = "0.14"  # For file dialogs
+urlencoding = "2.1"  # For URL encoding special characters in connection strings
+regex = "1.10"  # For robust URL parsing and replacement
